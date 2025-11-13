@@ -5,7 +5,7 @@ A hands-on learning repository focused on mastering React, TypeScript, and moder
 ## Goals
 
 - **React Mastery**: Deep dive into React concepts, hooks, state management, and component patterns
-- **TypeScript Proficiency**: Strengthen type-safe development practices=
+- **TypeScript Proficiency**: Strengthen type-safe development practices
 - **Modern Frontend Tooling**: Experience with Vite, Material-UI, and contemporary build tools
 - **Future BFF Integration**: Eventually connect frontend with Backend-for-Frontend services
 
