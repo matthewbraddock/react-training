@@ -81,6 +81,10 @@ The main App.tsx provides a simple navigation system to explore different exampl
 - Error handling
 - Authentication flows
 
+### General FrontEnd Concepts
+
+- Polyfills; What are they and when would you need one?
+
 ## Development Philosophy
 
 Each example demonstrates:
