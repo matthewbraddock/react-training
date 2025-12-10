@@ -15,6 +15,10 @@ Passing props through multiple component levels even when intermediate component
 ## When it becomes problematic
 
 - Deep nesting (4+ levels)
+  - Before making this call there is a lot context to consider:
+    - How many other components need this data
+    - How many times is this prop be repeatedly passed down in other distinct branches of the tree
+    - Contexts are more of a organizational tool for cross-cutting concerns (themes, auth, i18n) rather than a solution for every prop drilling scenario
 - Many components need the same data
 - Intermediate components get cluttered with pass-through props
 - Refactoring becomes painful when prop signatures change
