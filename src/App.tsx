@@ -10,11 +10,20 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import "./App.css";
 
-// Import all examples
+// Import Prop Drilling examples
 import PropDrillingExample from "./components/01-PropDrilling/PropDrillingExample/App";
 import ContextExample from "./components/01-PropDrilling/ContextSolution/App";
 
-type Example = "prop-drilling" | "context" | "menu";
+// Import Composition vs Inheritance examples
+import InheritanceExample from "./components/02-CompositionVsInheritance/InheritanceExample/App";
+import CompositionExample from "./components/02-CompositionVsInheritance/CompositionSolution/App";
+
+type Example =
+  | "prop-drilling"
+  | "context"
+  | "inheritance"
+  | "composition"
+  | "menu";
 
 function App() {
   const [currentExample, setCurrentExample] = useState<Example>("menu");
@@ -48,10 +57,38 @@ function App() {
           >
             Context Solution
           </Button>
+
+          <Typography variant="h4" component="h2" gutterBottom sx={{ mt: 4 }}>
+            Composition vs Inheritance
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: 2,
+            }}
+          >
+            <Button
+              variant="contained"
+              color="error"
+              onClick={() => setCurrentExample("inheritance")}
+              fullWidth
+              sx={{ maxWidth: 400 }}
+            >
+              ❌ Inheritance Example
+            </Button>
+            <Button
+              variant="contained"
+              color="success"
+              onClick={() => setCurrentExample("composition")}
+              fullWidth
+              sx={{ maxWidth: 400 }}
+            >
+              ✅ Composition Solution
+            </Button>
+          </Box>
         </Box>
-        <Typography variant="h4" component="h2" gutterBottom sx={{ mt: 3 }}>
-          Composition over inheritance Example
-        </Typography>
       </Box>
     );
   }
@@ -76,6 +113,8 @@ function App() {
       <Box sx={{ p: 2 }}>
         {currentExample === "prop-drilling" && <PropDrillingExample />}
         {currentExample === "context" && <ContextExample />}
+        {currentExample === "inheritance" && <InheritanceExample />}
+        {currentExample === "composition" && <CompositionExample />}
       </Box>
     </Box>
   );
